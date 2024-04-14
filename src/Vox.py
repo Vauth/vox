@@ -126,7 +126,7 @@ class VPNApp(QWidget):
         layout.addWidget(self.country_list)
         self.country_list.setCurrentRow(0)
 
-        self.made_by = QLabel(f"{COPYRIGHT} | {CREDIT} | {VERSION_NUMBER}", self)
+        self.made_by = QLabel(f"{Config.COPYRIGHT} | {Config.CREDIT} | {Config.VERSION_NUMBER}", self)
         self.made_by.setStyleSheet("QLabel {color: white;}")
         layout.addWidget(self.made_by, alignment=Qt.AlignCenter)
         self.setLayout(layout)
