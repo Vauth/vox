@@ -1,0 +1,65 @@
+name: Vox Builder
+
+permissions:
+  contents: write
+
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt
+
+      - name: Build Wheels
+        run: |
+          pyinstaller --onefile --icon=src/media/vpn.ico  --add-data="src/media;media" --add-data="src/tool;tool" src/Vox.py
+
+      - name: Set ENV
+        run: |
+          echo "VERSION_NUMBER=$(python -c 'from src.Vox import Config; print(Config.VERSION_NUMBER)')" | Out-File -FilePath $env:GITHUB_ENV -Append
+          echo "DRAFT=$(python -c 'from src.Vox import Config; print(Config.DRAFT)')" | Out-File -FilePath $env:GITHUB_ENV -Append
+          echo "PRE_RELEASE=$(python -c 'from src.Vox import Config; print(Config.PRE_RELEASE)')" | Out-File -FilePath $env:GITHUB_ENV -Append
+          echo "OS=$(python -c 'from src.Vox import Config; print(Config.OS)')" | Out-File -FilePath $env:GITHUB_ENV -Append
+          
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Vox-${{ env.VERSION_NUMBER }}
+          path: dist/Vox.exe
+      
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        with:
+          tag_name: ${{ env.VERSION_NUMBER }}
+          release_name: Release ${{ env.VERSION_NUMBER }}
+          body: "**Full Changelog**: https://github.com/Vauth/vox/commits/${{ env.VERSION_NUMBER }}"
+          draft: ${{ env.DRAFT }}
+          prerelease: ${{ env.PRE_RELEASE }}
+      
+      - name: Upload Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist/Vox.exe
+          asset_name: Vox-${{ env.OS }}.exe
+          asset_content_type: application/octet-stream
