@@ -11,9 +11,12 @@ from PyQt5.QtCore import QThread, Qt
 from PyQt5.QtGui import QIcon, QPalette, QColor
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QCheckBox, QLineEdit, QListWidget, QListWidgetItem, QLabel, QSpinBox, QAbstractSpinBox, QGroupBox, QGridLayout, QVBoxLayout
 
-#Version and Build
-VERSION = 'v1.0'
-BUILD = 'Windows(x64)'
+#System Configs
+class Config(object):
+    VERSION_NUMBER = 'v1.1'
+    DRAFT = 'false'  # Lowercase [true, false]
+    PRE_RELEASE = 'false'  # Lowercase [true, false], !! Tag name must contain only pre released builds
+    OS = 'Windows-x64' # Idk whats yours !?
 
 #Get file path
 def GetPath(pathex):
