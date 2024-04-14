@@ -1,4 +1,4 @@
-#Powered By feelded.t.me#
+#Powered By feelded.t.me
 
 import os
 import sys
@@ -17,6 +17,8 @@ class Config(object):
     DRAFT = 'false'  # Lowercase [true, false]
     PRE_RELEASE = 'false'  # Lowercase [true, false], !! Tag name must contain only pre released builds
     OS = 'Windows-x64' # Idk whats yours !?
+    COPYRIGHT = 2024
+    CREDIT = 'feelded.t.me'
 
 #Get file path
 def GetPath(pathex):
@@ -124,7 +126,7 @@ class VPNApp(QWidget):
         layout.addWidget(self.country_list)
         self.country_list.setCurrentRow(0)
 
-        self.made_by = QLabel("2024 | feelded.t.me | test-1.1", self)
+        self.made_by = QLabel(f"{COPYRIGHT} | {CREDIT} | {VERSION_NUMBER}", self)
         self.made_by.setStyleSheet("QLabel {color: white;}")
         layout.addWidget(self.made_by, alignment=Qt.AlignCenter)
         self.setLayout(layout)
