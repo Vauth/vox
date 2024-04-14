@@ -11,8 +11,9 @@ from PyQt5.QtCore import QThread, Qt
 from PyQt5.QtGui import QIcon, QPalette, QColor
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QCheckBox, QLineEdit, QListWidget, QListWidgetItem, QLabel, QSpinBox, QAbstractSpinBox, QGroupBox, QGridLayout, QVBoxLayout
 
-#Version
-VERSION = '1.0'
+#Version and Build
+VERSION = 'v1.0'
+BUILD = 'Windows(x64)'
 
 #Get file path
 def GetPath(pathex):
