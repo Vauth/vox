@@ -1,6 +1,6 @@
 
 <h1>
-  Vox <a href="#Favicon"><img src="https://raw.githubusercontent.com/Vauth/vox/main/src/media/vpn.png" width="30px"></a> Unofficial Warp Client for Windows
+  Vox <a href="#Favicon"><img src="https://raw.githubusercontent.com/Vauth/vox/main/src/media/vpn.png" width="33px"></a> Unofficial Warp Client for Windows
 </h1>
 
 ### 🔎 Features:
