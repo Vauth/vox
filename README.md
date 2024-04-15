@@ -29,6 +29,12 @@
 
 </br>
 
+## 🚀 Quick Start
+- **Download:** Grab the EXE from our [Releases](https://github.com/Vauth/vox/releases) .
+- **Connect:** Launch Vox and hit the connect button.
+
+</br>
+
 ## ⚙️ Building The Application
 - #### Clone Repository:
 ```shell
