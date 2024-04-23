@@ -7,13 +7,14 @@ import time
 import json
 import winreg
 import atexit
+import platform
 from PyQt5.QtCore import QThread, Qt
 from PyQt5.QtGui import QIcon, QPalette, QColor
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QCheckBox, QLineEdit, QListWidget, QListWidgetItem, QLabel, QSpinBox, QAbstractSpinBox, QGroupBox, QGridLayout, QVBoxLayout
 
 #System Configs
 class Config(object):
-    VERSION_NUMBER = 'v1.0'
+    VERSION_NUMBER = 'v1.1'
     DRAFT = 'false'  # Lowercase [true, false]
     PRE_RELEASE = 'false'  # Lowercase [true, false], !! Tag name must contain only pre released builds
     OS = 'Windows-x64' # Idk whats yours !?
@@ -29,9 +30,11 @@ def GetPath(pathex):
 #Set Proxy
 def SetProxy(proxy_host, proxy_port):
     try:
+        if 'Windows-10' in platform.platform(): final_proxy = f'socks={proxy_host}:{proxy_port}'  # Windows-10 proxy structure
+        else: final_proxy = f'{proxy_host}:{proxy_port}'
         internet_settings_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r'Software\Microsoft\Windows\CurrentVersion\Internet Settings', 0, winreg.KEY_WRITE)
         winreg.SetValueEx(internet_settings_key, 'ProxyEnable', 0, winreg.REG_DWORD, 1)
-        winreg.SetValueEx(internet_settings_key, 'ProxyServer', 0, winreg.REG_SZ, f'socks={proxy_host}:{proxy_port}')
+        winreg.SetValueEx(internet_settings_key, 'ProxyServer', 0, winreg.REG_SZ, final_proxy)  # final_proxy referencing to L33-34
         winreg.CloseKey(internet_settings_key)
         print("SOCKS5 proxy set successfully.")
     except Exception as e:
