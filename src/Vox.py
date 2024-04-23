@@ -14,7 +14,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QCh
 
 #System Configs
 class Config(object):
-    VERSION_NUMBER = 'v1.0'
+    VERSION_NUMBER = 'v1.1'
     DRAFT = 'false'  # Lowercase [true, false]
     PRE_RELEASE = 'false'  # Lowercase [true, false], !! Tag name must contain only pre released builds
     OS = 'Windows-x64' # Idk whats yours !?
