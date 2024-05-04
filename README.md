@@ -1,7 +1,8 @@
+<h1>Vox <a href="#Favicon"><img src="https://raw.githubusercontent.com/Vauth/vox/main/src/media/vpn.png" width="33px"></a> Unofficial Warp Client for Windows</h1>
+<a href="https://www.virustotal.com/gui/file/87dc780050f15219bd9cf21b417caf00a62dd2e18e777a9e007f92c2a7f80a6c/detection"><img src="https://img.shields.io/badge/-VirusTotal-5238ff?style=flat&logo=virustotal&logoColor=white"></a>
+<a href="https://github.com/Vauth/vox/actions"><img src="https://img.shields.io/badge/-Github%20Actions-5238ff?style=flat&logo=githubactions&logoColor=white"></a>
+<a href="https://www.studytonight.com/post/x86-vs-x64-what-is-the-difference-between-x86-and-x64-architecture"><img src="https://img.shields.io/badge/-Windows%20x64-5238ff?style=flat&logo=windows&logoColor=white"></a>
 
-<h1>
-  Vox <a href="#Favicon"><img src="https://raw.githubusercontent.com/Vauth/vox/main/src/media/vpn.png" width="33px"></a> Unofficial Warp Client for Windows
-</h1>
 
 ### 🔎 Features:
 - **User-Friendly:** Simple, intuitive interface.
