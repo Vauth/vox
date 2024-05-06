@@ -64,10 +64,16 @@ pyinstaller --onefile --icon=src/media/vpn.ico  --add-data="src/media;media" --a
 - Disable system antivirus & browsers privacy, unsigned apps may be detected as `malicious software` .
 - You are connected to `socks5` through `system proxy` , so some apps may not support socks5 proxies .
 - Socks5 only works correctly on browsers if you set `Proxy DNS For Browsers` .
-- Vox has been tested on `Windows 10 (x64)`. if it crashes on your system, feel free to [contact us](https://t.me/ExecalChat).
+- Vox has been tested on `Windows 10 (x64)`. if it crashes on your system, feel free to contact.
 
 </br>
 
 ## 📷 Screenshot
 
 <a href="#Screenshot"><img src="https://i.ibb.co/KmnfdCw/5975e06f697a.png" width="400px"></a>
+
+</br>
+
+## 🧪 Browserleaks
+
+<a href="#LeaksTest"><img src="https://i.ibb.co/p4V4LM5/3811f9d9a92a.png" width="400px"></a>
