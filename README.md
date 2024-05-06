@@ -74,6 +74,6 @@ pyinstaller --onefile --icon=src/media/vpn.ico  --add-data="src/media;media" --a
 
 </br>
 
-## 🧪 Browserleaks Test
+## 🧪 Browserleaks
 
 <a href="#LeaksTest"><img src="https://i.ibb.co/p4V4LM5/3811f9d9a92a.png" width="400px"></a>
