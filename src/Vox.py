@@ -70,7 +70,7 @@ class ConsoleOutput(QTextEdit):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setReadOnly(True)
-        self.setStyleSheet("QTextEdit {background-color: #111;color: #ffffff;border-radius: 8px;font-family: Consolas, monospace;padding: 8px;}QScrollBar:vertical {background: #111;border-radius: 8px;}QScrollBar::handle:vertical {background: #474747;border-radius: 8px;}QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {background: #111;}QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {background: none;border: none;}")
+        self.setStyleSheet("QTextEdit {background-color: #111;color: #ffffff;border-radius: 8px;font-family: Consolas, monospace;padding: 8px;selection-background-color: #474747;}QScrollBar:vertical {background: #111;border-radius: 8px;}QScrollBar::handle:vertical {background: #474747;border-radius: 8px;}QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {background: #111;}QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {background: none;border: none;}")
 
 
 # Worker thread for VoxCore
