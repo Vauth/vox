@@ -50,7 +50,7 @@ python3 -m pip install -r requirements.txt
 
 - #### Build The Project:
 ```shell
-pyinstaller --onefile --icon=src/media/vpn.ico  --add-data="src/media;media" --add-data="src/tool;tool" src/Vox.py
+pyinstaller --onefile --noconsole --icon=src/media/vpn.ico  --add-data="src/media;media" --add-data="src/tool;tool" src/Vox.py
 ```
 
 </br>
