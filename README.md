@@ -70,7 +70,7 @@ pyinstaller --onefile --icon=src/media/vpn.ico  --add-data="src/media;media" --a
 
 ## 📷 Screenshot
 
-<a href="#Screenshot"><img src="https://i.ibb.co/KmnfdCw/5975e06f697a.png" width="400px"></a>
+<a href="#Screenshot"><img src="https://i.ibb.co/j93RdN6Z/7faf25f117e0.png" width="497px"></a>
 
 </br>
 
