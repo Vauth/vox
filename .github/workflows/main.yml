@@ -27,7 +27,7 @@ jobs:
 
       - name: Build Wheels
         run: |
-          pyinstaller --onefile --icon=src/media/vpn.ico  --add-data="src/media;media" --add-data="src/tool;tool" src/Vox.py
+          pyinstaller --onefile --noconsole --icon=src/media/vpn.ico  --add-data="src/media;media" --add-data="src/tool;tool" src/Vox.py
 
       - name: Set ENV
         run: |
